@@ -23,5 +23,8 @@ def index():
 @app.route('/result')
 def sended_form():
     return render_template('result.html')
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('error.html')
 if __name__=="__main__":
     app.run(debug=True)
