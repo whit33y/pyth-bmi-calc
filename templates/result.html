@@ -4,11 +4,23 @@
     <div class="row">
         <h1 class="text-center mb-5">BMI <span class="text-muted">CALCULATOR</span></h1>
         <div class="col-6 offset-3">
-    <p>Your height: <span class="text-muted">{{height}}</span></p>
-    <p>Your weight: <span class="text-muted">{{weight}}</span></p>
-    <p>Your BMI: <span class="text-muted">{{result}}</span></p>
-    <h2>{{final_concl}}</h2>
-    <button class="btn btn-primary"><a href="/" class="text-light">Calculate again</a></button>
+    <p class="text-center">Your height: <span class="text-muted">{{height}}</span></p>
+    <p class="text-center">Your weight: <span class="text-muted">{{weight}}</span></p>
+    <p class="text-center"> Your BMI: <span class="text-muted">{{result}}</span></p>
+    <h2 class="text-center">{{final_concl}}</h2>
+    <div class="col-6 offset-3 d-flex justify-content-center">
+    <button class="btn btn-primary text-center"><a href="/" class="text-light">Calculate again</a></button>
+    </div>
+</div>
+<div class="row">
+    <h1 class="text-center mb-5">BMI <span class="text-muted">Categories</span></h1>
+    <div class="col-6 offset-3">
+        <p class="text-center">Under 16: <span class="text-muted">Starvation</span></p>
+        <p class="text-center">Over 16 under 18.5: <span class="text-muted">Emaciation</span></p>
+        <p class="text-center">Over 18.5 under 25: <span class="text-muted">Normal</span></p>
+        <p class="text-center">Over 25 under 30: <span class="text-muted">Overweight</span></p>
+        <p class="text-center">Over 30: <span class="text-muted">Obesity</span></p>
+    </div>
 </div>
 </div>
     {% endblock %}
