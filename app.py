@@ -6,9 +6,6 @@ def index():
     if request.method == 'POST':
         height = request.form.get('height')
         weight = request.form.get('weight')
-        height_text = 'Your height: '
-        weight_text = 'Your weight: '
-        result_text = 'Your result: '
         result_helper = (int(height)/100)**2
         result = round(int(weight)/result_helper,2)
         if result<16:
@@ -21,7 +18,7 @@ def index():
             final_concl = 'Overweight'
         else:
             final_concl = 'Obesity'
-        return render_template('result.html',height=height, weight=weight, height_text = height_text, weight_text=weight_text,result=result, final_concl=final_concl)
+        return render_template('result.html',height=height, weight=weight,result=result, final_concl=final_concl)
     return render_template('index.html')
 @app.route('/result')
 def sended_form():

@@ -1,9 +1,14 @@
 <title>Result</title>
 {% extends 'base.html'%}
     {% block main %}
-    <p>{{height_text}}{{height}}</p>
-    <p>{{weight_text}}{{weight}}<br></p>
-    <p>Your BMI: {{result}}</p>
+    <div class="row">
+        <h1 class="text-center mb-5">BMI <span class="text-muted">CALCULATOR</span></h1>
+        <div class="col-6 offset-3">
+    <p>Your height: <span class="text-muted">{{height}}</span></p>
+    <p>Your weight: <span class="text-muted">{{weight}}</span></p>
+    <p>Your BMI: <span class="text-muted">{{result}}</span></p>
     <h2>{{final_concl}}</h2>
-    <a href="/">Calculate again</a>
+    <button class="btn btn-primary"><a href="/" class="text-light">Calculate again</a></button>
+</div>
+</div
     {% endblock %}
